@@ -1,0 +1,35 @@
+
+server:
+  port: 9002
+  tomcat:
+    uri-encoding: UTF-8
+
+# spring+springMVC+mybatis
+spring:
+  datasource:
+    username: my_personnel_operator
+    password: red987654321
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.224.128.87:3306/my_pesonnel_db?serverTimezone=UTC&characterEncoding=utf-8
+    hikari:
+      connection-timeout: 60000
+      validation-timeout: 3000
+      idle-timeout: 60000
+      login-timeout: 5
+      max-lifetime: 60000
+      maximum-pool-size: 10
+      minimum-idle: 10
+      read-only: false
+  mvc:
+    view:
+      suffix: .jsp
+
+
+#mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.myprojects.common.pojo
+
+#pagehelper
+pagehelper:
+  reasonable: true

@@ -1,0 +1,39 @@
+#服务器端口号
+server:
+  port: 9001
+  tomcat:
+    uri-encoding: UTF-8
+
+# spring+springMVC+mybatis
+# 数据源(数据库连接池)
+spring:
+  datasource:
+    username: my_personnel_operator
+    password: red987654321
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.224.128.87:3306/my_pesonnel_db?serverTimezone=UTC&characterEncoding=utf-8
+    hikari:
+      connection-timeout: 60000
+      validation-timeout: 3000
+      idle-timeout: 60000
+      login-timeout: 5
+      max-lifetime: 60000
+      maximum-pool-size: 10
+      minimum-idle: 10
+      read-only: false
+  mvc:
+    view:
+      suffix: .jsp
+
+
+#配置mybatis
+mybatis:
+  #配置mybatis的sql映射文件路径
+  mapper-locations: classpath:mapper/*.xml
+  #配置类型别名
+  type-aliases-package: com.myprojects.common.pojo
+
+#配置pagehelper
+pagehelper:
+  #设置reasonable为true可以防止页数不正常(负数或大于最大页数)
+  reasonable: true

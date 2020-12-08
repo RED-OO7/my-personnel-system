@@ -15,7 +15,7 @@ public class TestController {
 
     @RequestMapping(value = "/test")
     public String test(){
-        return "index";
+        return "test3";
     }
 }
 

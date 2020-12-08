@@ -11,9 +11,11 @@
     <script src="static/bootstrap-3.3.7-dist/js/bootstrap.min.js" ></script>
 </head>
 <body>
-<button class="btn success">
-我是按钮
-</button>
-
+<div>
+<h1>欢迎使用xxx系统</h1>
+<p class="lead">
+    Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+</p>
+</div>
 </body>
 </html>
